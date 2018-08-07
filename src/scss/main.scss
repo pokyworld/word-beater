@@ -1,0 +1,30 @@
+@import "config";
+
+// * { font-family: 'Kanit', 'Lato', sans-serif; }
+
+/* comment test or compile */
+
+* { font-family: 'Kanit', sans-serif; font-size: 112.5%; }
+
+html { padding: 0; margin: 0; width: 100vw; height: 100vh; }
+
+body, #root {
+    padding: 0; 
+    margin: 0; 
+    background: $primary-color;
+    color: #ddd;
+    width: 100vw; 
+    height: 100vh;
+}
+
+.container {
+    padding: 1.5rem;
+}
+
+h1,h2,h3,h4 {
+    color: $secondary-color;
+}
+
+
+// media queries: LAST ITEM in this file
+@import "responsive";
