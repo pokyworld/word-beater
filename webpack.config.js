@@ -83,8 +83,8 @@ module.exports = {
     devtool: "eval",
     devServer: {
         https: true,
-        cert: fs.readFileSync('C:/Users/Des/Documents/Projects/SSL/ia.localhost.crt'),
-        key: fs.readFileSync('C:/Users/Des/Documents/Projects/SSL/ia.localhost.key'),
+        cert: fs.readFileSync('/Users/desb/Projects/ssl/localhost/ia.localhost.crt'),
+        key: fs.readFileSync('/Users/desb/Projects/ssl/localhost/ia.localhost.key'),
         contentBase: path.join(__dirname, "public"),
         historyApiFallback: true,
         compress: true,
