@@ -105,7 +105,7 @@ const startMatch = () => {
 
 // Test word word matching
 const matchWords = () => {
-    if (wordInput.value === currentWord.textContent) {
+    if (wordInput.value.toLowerCase() === currentWord.textContent.toLowerCase()) {
         message.textContent = "Correct !!";
         return true;
       } else {
