@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JavaScript word game",
   "main": "index.js",
+  "homepage": "https://pokyworld.github.io/word-beater",
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development",
