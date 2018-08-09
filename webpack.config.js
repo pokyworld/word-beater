@@ -18,10 +18,10 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node-modules/
             },
-            // {
-            //     test: /config\.json$/,
-            //     loader: "json-loader"
-            // },
+            {
+                test: /data\.json$/,
+                loader: "json-loader"
+            },
             // {
             //     test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
             //     use: [{

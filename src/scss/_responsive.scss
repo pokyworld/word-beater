@@ -1,0 +1,111 @@
+// widescreens
+@include mediaXl {
+    
+}
+
+// Desktops and Laptops
+@include mediaLg {
+
+}
+
+// Large Tablets and small laptops and landscape orientation
+@include mediaMd {
+    main {
+        #score-board {
+            margin: 1rem;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'time score';
+            grid-template-columns: repeat(2, 1fr);
+            text-align: center;
+            padding: 0;
+
+            div {
+                padding: 0;
+                
+                h3 { 
+                    font-size: 6vw; 
+                    padding: 0
+                    span { color: $secondary-color; }
+                }
+            }
+        }
+
+        .instructions {
+            margin: 3rem 1rem;
+        }
+    }
+}
+
+// Small Tablets and Large Phones
+@include mediaSm {
+    main {
+        h2 { font-size: 20vw; }
+        h4 { font-size: 8vw; }
+        p { font-size: 5vw; }
+        input { 
+            font-size: 8vw; 
+            width: 80%; 
+        }
+        #score-board {
+            margin: 1rem;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'time score';
+            grid-template-columns: repeat(2, 1fr);
+            text-align: center;
+            padding: 0;
+
+            div {
+                padding: 0;
+                
+                h3 { 
+                    font-size: 6vw; 
+                    padding: 0
+                    span { color: $secondary-color; }
+                }
+            }
+        }
+
+        .instructions {
+            margin: 3rem 1rem;
+        }
+    }
+}
+
+// Small Phones in landscape orientation
+@include mediaXs {
+    main {
+        p { font-size: 5vw; }
+        input { 
+            font-size: 8vw; 
+            width: 80%; 
+        }
+        #score-board {
+            background: lighten($primary-color, 20);
+            border-radius: 0.3rem;
+            margin: 1rem 3rem 0;
+
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'time score';
+            grid-template-columns: repeat(2, 1fr);
+            text-align: center;
+            padding: 0;
+
+            div {
+                padding: 0;
+                
+                h3 { 
+                    font-size: 5vw; 
+                    margin: 1rem;
+                    span { color: $secondary-color; }
+                }
+            }
+        }
+
+        .instructions {
+            margin: 3rem 1rem;
+        }
+    }
+}

@@ -7,12 +7,45 @@
     <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link href="//fonts.googleapis.com/css?family=Kanit:300|Lato" rel="stylesheet">
-    <title>js Boilerplate</title>
+    <title>Word Beater JS Game</title>
 </head>
 <body>
     <div class="container">
-        <h1>JS Boiler-plate</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloremque quam aliquam repellendus vitae recusandae minus dolor ratione sint illo!</p>
+        <header>
+            <h1 class="text-highlight">ES6 Word Beater</h1>
+        </header>
+        <main>
+            <!-- Word & Input -->
+            <p>Type the given word within <span id="seconds" class="text-highlight">5</span> seconds</p>
+            <h2 id="current-word"></h2>
+            <div id="input-wrapper">
+                <input type="text" placeholder="Start typing..." id="word-input" autofocus />
+            </div>
+            <h4 id="message">Game Over!</h4>
+
+            <!-- Time & Score -->
+            <div id="score-board">
+                <div class="time"><h3>Time Left: <span id="time">0</span></h3></div>
+                <div class="score"><h3>Score: <span id="score">0</span></h3></div>
+            </div>
+            
+            <!-- Instructions -->
+            <div class="instructions">
+                <h5>
+                    Level:
+                    <select id="select-level">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <button id="restart-button">Restart</button>
+                </h5>
+                <h5>Instructions</h5>
+                <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score will
+                    reset</p>
+            </div>
+        </main>
+        <footer></footer>
     </div>
 </body>
 </html>

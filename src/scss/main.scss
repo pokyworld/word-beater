@@ -2,8 +2,6 @@
 
 // * { font-family: 'Kanit', 'Lato', sans-serif; }
 
-/* comment test or compile */
-
 * { font-family: 'Kanit', sans-serif; font-size: 112.5%; }
 
 html { padding: 0; margin: 0; width: 100vw; height: 100vh; }
@@ -12,17 +10,89 @@ body, #root {
     padding: 0; 
     margin: 0; 
     background: $primary-color;
-    color: #ddd;
+    color: set-text-color($primary-color);
     width: 100vw; 
     height: 100vh;
 }
 
-.container {
-    padding: 1.5rem;
+.container { padding: 0; }
+.text-secondary { color: set-text-color($secondary-color); }
+.text-highlight { color: $highlight-color; }
+
+h1,h2,h3,h4 { color: $secondary-color; }
+
+header { 
+    background-color: lighten($primary-color, 20);
+    margin: 0 auto !important;
+    padding: 1vh 2rem;
+    text-align: center;
+
+    h1 { margin: 0; }
 }
 
-h1,h2,h3,h4 {
-    color: $secondary-color;
+main {
+    text-align: center;
+    margin: 0 auto !important;
+
+    p { font-size: 3vw; margin: 2vh 0.1rem; }
+    h2 { font-size: 10vw; margin: 1vh 1rem; }
+    h4 { font-size: 5vw; margin: 0 1rem; }
+    #input-wrapper { 
+        width: 100vw; 
+        position: relative; 
+        text-align: center; 
+
+        &.hidden {
+            display: none;
+        }
+    }
+    input { 
+        font-size: 5vw; 
+        margin: 2vh 1rem; 
+        position: relative; 
+        width: 60%; 
+        border-radius: 0.3rem; 
+        padding: 0 1rem; 
+    }
+    .time { grid-area: time; }
+    .score { grid-area: score; }
+
+    #score-board {
+        background: lighten($primary-color, 20);
+        border-radius: 0.3rem;
+        margin: 1rem 3rem 0;
+        padding: 0;
+
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+        '. time score .';
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        div {
+            margin: 0;
+            
+            h3 { 
+                font-size: 3vw; 
+                margin: 0.5rem;
+
+                span { color: $highlight-color; }
+            }
+        }
+    }
+
+    .instructions {
+        margin: 3rem;
+        background: lighten($primary-color, 8);
+        border-radius: 0.3rem;
+        text-align: center;
+        padding: 1.5rem;
+
+        h5 { margin: 0; color: $highlight-color; }
+        #select-level { background-color: $secondary-color; color: set-text-color($secondary-color); }
+        #restart-button { background: $highlight-color; color: $primary-color; border-radius: 0.3rem;}
+        #select-level, #restart-button { margin-bottom: 1.5rem; }
+    }
 }
 
 

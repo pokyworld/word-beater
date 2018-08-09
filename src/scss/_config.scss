@@ -1,2 +1,47 @@
 $primary-color: #222;
-$secondary-color: #ffbb00;
+$secondary-color: #ddd;
+$highlight-color: #ffd900;
+
+$light-theme-text-color: #222;
+$dark-theme-text-color: #ddd;
+
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return $light-theme-text-color;
+    } @else {
+        @return $dark-theme-text-color;
+    }
+}
+
+// mixins for media queries
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px ) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaSm {
+    @media screen and (max-width: 500px) and (max-height: 820px) {
+        @content;
+    }
+}
+
+@mixin mediaXs {
+    @media screen and (max-height: 400px) and (max-width: 700px) {
+        @content;
+    }
+}

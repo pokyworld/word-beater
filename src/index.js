@@ -1,5 +1,6 @@
 import registerServiceWorker from "./registerServiceWorker";
 
-import "./components/app";
+import * as main from "./components/main";
 
+main.init();
 registerServiceWorker();

@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "6994b128f2e658eabe46";
+/******/ 	var hotCurrentHash = "6cf747d0768cee304194";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -794,15 +794,27 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/components/app.js":
-/*!*******************************!*\
-  !*** ./src/components/app.js ***!
-  \*******************************/
+/***/ "./src/components/data.js":
+/*!********************************!*\
+  !*** ./src/components/data.js ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n//# sourceURL=webpack:///./src/components/app.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar words = exports.words = ['hat', 'river', 'lucky', 'statue', 'generate', 'stubborn', 'cocktail', 'runaway', 'joke', 'developer', 'establishment', 'hero', 'javascript', 'nutrition', 'revolver', 'echo', 'siblings', 'investigate', 'horrendous', 'symptom', 'laughter', 'magic', 'master', 'space', 'definition'];\n\n//# sourceURL=webpack:///./src/components/data.js?");
+
+/***/ }),
+
+/***/ "./src/components/main.js":
+/*!********************************!*\
+  !*** ./src/components/main.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _data = __webpack_require__(/*! ./data */ \"./src/components/data.js\");\n\nvar _data2 = _interopRequireDefault(_data);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// import words from \"../data/words.json\";\nconsole.log(_data2.default);\n\n// globals\n\n// Available levels\nvar levels = {\n    easy: 5,\n    medium: 3,\n    hard: 1\n};\n\n// To change level\nvar currentLevel = levels.medium;\n\n// DOM Elements\n// const\n\n//# sourceURL=webpack:///./src/components/main.js?");
 
 /***/ }),
 
@@ -814,7 +826,7 @@ eval("\n\n//# sourceURL=webpack:///./src/components/app.js?");
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _registerServiceWorker = __webpack_require__(/*! ./registerServiceWorker */ \"./src/registerServiceWorker.js\");\n\nvar _registerServiceWorker2 = _interopRequireDefault(_registerServiceWorker);\n\n__webpack_require__(/*! ./components/app */ \"./src/components/app.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _registerServiceWorker2.default)();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _registerServiceWorker = __webpack_require__(/*! ./registerServiceWorker */ \"./src/registerServiceWorker.js\");\n\nvar _registerServiceWorker2 = _interopRequireDefault(_registerServiceWorker);\n\n__webpack_require__(/*! ./components/main */ \"./src/components/main.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _registerServiceWorker2.default)();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
