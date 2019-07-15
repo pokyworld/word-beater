@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require("path");
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: ["./src/index.js", "./src/scss/main.scss"],
@@ -32,13 +32,13 @@ module.exports = {
             //         }
             //     }]
             // },
-            {
-                test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader, 
-                    'css-loader'
-                ]
-            },
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         MiniCssExtractPlugin.loader, 
+            //         'css-loader'
+            //     ]
+            // },
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
@@ -63,31 +63,33 @@ module.exports = {
             assetNameRegExp: /\.min\.css$/,
             cssProcessorOptions: { discardComments: { removeAll: true } }
         }),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: 'index.html',
-            inject: 'body',
-            hash: true,
-            minify: {
-                removeAttributeQuotes: true,
-                collapseWhitespace: true,
-                html5: true,
-                removeComments: true,
-                removeEmptyAttributes: true,
-                minifyCSS: true,
-            },
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin(),
+        // new HtmlWebpackPlugin({
+        //     template: './src/index.html',
+        //     filename: 'index.html',
+        //     inject: 'body',
+        //     hash: true,
+        //     minify: {
+        //         removeAttributeQuotes: true,
+        //         collapseWhitespace: true,
+        //         html5: true,
+        //         removeComments: true,
+        //         removeEmptyAttributes: true,
+        //         minifyCSS: true,
+        //     },
+        // }),
+        // new webpack.HotModuleReplacementPlugin(),
+        // new webpack.NoEmitOnErrorsPlugin(),
     ],
     devtool: "eval",
     devServer: {
         https: true,
-        cert: fs.readFileSync('/Users/desb/Projects/ssl/localhost/ia.localhost.crt'),
-        key: fs.readFileSync('/Users/desb/Projects/ssl/localhost/ia.localhost.key'),
+        // cert: fs.readFileSync('/Volumes/Transcend/Drive/Projects/Active/React/word-beater/ssl/localhost.crt'),
+        // key: fs.readFileSync('/Volumes/Transcend/Drive/Projects/Active/React/word-beater/ssl/localhost.key'),
+        cert: fs.readFileSync('S:\\Projects\\REACT\\word-beater\\ssl\\localhost.crt'),
+        key: fs.readFileSync('S:\\Projects\\REACT\\word-beater\\ssl\\localhost.key'),
         contentBase: path.join(__dirname, "public"),
         historyApiFallback: true,
         compress: true,
-        port: 8443
+        port: 4343
     }
 }

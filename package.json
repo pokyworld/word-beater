@@ -14,7 +14,9 @@
   },
   "author": "Des Butler",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "npm-check-updates": "^3.1.20"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
